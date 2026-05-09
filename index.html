@@ -67,10 +67,10 @@
 <body>
     <div class="container">
         <h1>Datenschutzerkl&auml;rung</h1>
-        <p class="date">ZahnDoku &mdash; Stand: April 2026</p>
+        <p class="date">ZahnDoku &mdash; Stand: Mai 2026</p>
 
         <h2>1. Verantwortlicher</h2>
-        <p>Dr. Jan-Niclas Press<br>Zahnarzt<br>Brandhofgasse 24/1<br>8010 Graz, &Ouml;sterreich<br>Kontakt: <a href="mailto:kontakt.zahndoku@gmail.com">kontakt.zahndoku@gmail.com</a></p>
+        <p>Dr. Jan-Niclas Press<br>Zahnarzt<br>Brandhofgasse 24/1, 8010 Graz, &Ouml;sterreich<br>Kontakt: <a href="mailto:kontakt.zahndoku@gmail.com">kontakt.zahndoku@gmail.com</a></p>
 
         <h2>2. Welche Daten werden erhoben?</h2>
         <p>ZahnDoku ist eine lokale Fotodokumentations-App f&uuml;r Zahnarztpraxen. Die App erhebt und speichert folgende Daten <strong>ausschlie&szlig;lich lokal</strong> auf dem Ger&auml;t des Nutzers:</p>
@@ -78,25 +78,35 @@
             <li><strong>Patientendaten:</strong> Vorname, Nachname, Geburtsdatum (optional), Notizen</li>
             <li><strong>Fotos und Videos:</strong> Dentale Aufnahmen zur klinischen Dokumentation</li>
             <li><strong>Klinische Annotationen:</strong> VITA-Zahnfarben, Beleuchtungsart, Zahnnummern (FDI-Schema)</li>
-            <li><strong>Kamerametadaten:</strong> ISO, Verschlusszeit, Brennweite (zur Qualit&auml;tskontrolle)</li>
             <li><strong>Sicherheitsdaten:</strong> PIN-Hash (lokal in Keychain), biometrische Authentifizierung</li>
         </ul>
+        <p>Standort- und Ger&auml;temetadaten (EXIF/GPS) werden bei der Aufnahme automatisch entfernt und nicht gespeichert.</p>
 
         <h2>3. Wo werden die Daten gespeichert?</h2>
         <div class="highlight">
             <strong>Alle Daten werden ausschlie&szlig;lich lokal auf dem iOS-Ger&auml;t gespeichert. Es findet kein Upload auf externe Server, Cloud-Dienste oder Drittanbieter statt.</strong>
         </div>
         <ul>
-            <li>Patientendaten und Fotos im App-Sandboxverzeichnis</li>
-            <li>PIN-Hash in der iOS Keychain (hardwareverschl&uuml;sselt)</li>
+            <li>Patientendaten und Fotos im gesch&uuml;tzten App-Sandboxverzeichnis (mit iOS-Dateischutz NSFileProtectionComplete)</li>
+            <li>PIN-Hash in der iOS Keychain (hardwareverschl&uuml;sselt, nur auf diesem Ger&auml;t zug&auml;nglich)</li>
             <li>Optionales Backup im lokalen Dateisystem (sichtbar in der Dateien-App)</li>
         </ul>
+        <p>Patientendaten (Fotos, Patientenakte, Papierkorb) sind vom iCloud-/iTunes-Backup ausgeschlossen und werden nicht in die Cloud synchronisiert.</p>
 
-        <h2>4. iCloud-Synchronisation</h2>
-        <p>Wenn der Nutzer die optionale Backup-Funktion aktiviert und iCloud Drive eingerichtet ist, werden Backup-Kopien &uuml;ber Apples iCloud-Infrastruktur synchronisiert. Dies unterliegt den <a href="https://www.apple.com/legal/privacy/" target="_blank">Datenschutzbestimmungen von Apple</a>.</p>
-        <p>Die iCloud-Synchronisation kann jederzeit in den iOS-Einstellungen deaktiviert werden.</p>
+        <h2>4. Ger&auml;te-Transfer</h2>
+        <p>Die App bietet eine Ger&auml;te-Transfer-Funktion, mit der alle Daten als .zahnbackup-Datei exportiert und auf ein neues Ger&auml;t &uuml;bertragen werden k&ouml;nnen. Der Transfer erfolgt ausschlie&szlig;lich durch den Nutzer (z.&nbsp;B. per AirDrop oder USB) &mdash; ohne Beteiligung externer Server.</p>
+        <p>Die Transfer-Datei enth&auml;lt alle Patientendaten und ist nicht verschl&uuml;sselt. Der Nutzer ist f&uuml;r den sicheren Umgang und die L&ouml;schung nach erfolgreichem Transfer verantwortlich. Der PIN muss auf dem neuen Ger&auml;t neu gesetzt werden.</p>
 
-        <h2>5. Drittanbieter-Dienste</h2>
+        <h2>5. Forschungsmodus (optional)</h2>
+        <p>Im optionalen Forschungsmodus werden Fotos f&uuml;r wissenschaftliche Zwecke aufbereitet:</p>
+        <ul>
+            <li><strong>Anonymisierung:</strong> Patientennamen werden durch irreversible Hashwerte ersetzt</li>
+            <li><strong>EXIF-Entfernung:</strong> Alle Ger&auml;te- und Standortmetadaten werden entfernt</li>
+            <li><strong>Lokale Speicherung:</strong> Forschungsdaten verbleiben auf dem Ger&auml;t bis zum manuellen Export</li>
+        </ul>
+        <p>Der Export erfolgt ausschlie&szlig;lich durch den Nutzer &mdash; die App sendet keine Daten eigenst&auml;ndig.</p>
+
+        <h2>6. Drittanbieter-Dienste</h2>
         <p>ZahnDoku verwendet <strong>keine</strong> Drittanbieter-Dienste:</p>
         <ul>
             <li>Kein Analytics (kein Google Analytics, Firebase, etc.)</li>
@@ -105,27 +115,32 @@
             <li>Keine externen APIs oder Server</li>
         </ul>
 
-        <h2>6. Datenweitergabe</h2>
-        <p>Patientendaten werden <strong>nicht</strong> an Dritte weitergegeben. Die einzige M&ouml;glichkeit des Datenexports ist die manuelle Aktion des Nutzers (ZIP-Export, PDF-Report, Teilen-Dialog).</p>
+        <h2>7. Datenweitergabe</h2>
+        <p>Patientendaten werden <strong>nicht</strong> an Dritte weitergegeben. Die einzige M&ouml;glichkeit des Datenexports ist die manuelle Aktion des Nutzers (ZIP-Export, PDF-Report, Ger&auml;te-Transfer, Teilen-Dialog).</p>
 
-        <h2>7. Datensicherheit</h2>
+        <h2>8. Datensicherheit</h2>
         <ul>
-            <li>PIN-Schutz (4-stellig, Hash in Keychain)</li>
+            <li>PIN-Schutz (4-stellig, Hash in Keychain, hardwareverschl&uuml;sselt)</li>
             <li>Optionale biometrische Entsperrung (Face ID / Touch ID)</li>
-            <li>Alle Dateien im gesch&uuml;tzten App-Sandbox-Verzeichnis</li>
+            <li>iOS-Dateischutz (NSFileProtectionComplete) &mdash; Patientendaten nur bei entsperrtem Ger&auml;t zug&auml;nglich</li>
+            <li>Automatische Entfernung von Standort- und Ger&auml;temetadaten (EXIF/GPS) aus allen Fotos</li>
+            <li>Patientendaten vom iCloud-/iTunes-Backup ausgeschlossen</li>
+            <li>Datenschutzbildschirm im App-Switcher (keine Patientendaten sichtbar)</li>
+            <li>Fotos im Forschungsmodus: zus&auml;tzlich EXIF-bereinigt, SHA256-Pr&uuml;fsumme</li>
         </ul>
 
-        <h2>8. L&ouml;schung</h2>
+        <h2>9. L&ouml;schung</h2>
         <ul>
             <li>Fotos und Videos k&ouml;nnen jederzeit gel&ouml;scht werden (7-Tage-Papierkorb)</li>
             <li>Patientendaten k&ouml;nnen vollst&auml;ndig entfernt werden</li>
+            <li>Forschungsdaten k&ouml;nnen separat gel&ouml;scht werden</li>
             <li>Bei App-Deinstallation werden alle lokalen Daten entfernt</li>
         </ul>
 
-        <h2>9. Rechte der Betroffenen</h2>
+        <h2>10. Rechte der Betroffenen</h2>
         <p>Gem&auml;&szlig; DSGVO haben betroffene Personen das Recht auf Auskunft, Berichtigung, L&ouml;schung, Einschr&auml;nkung der Verarbeitung und Widerspruch. Da alle Daten lokal gespeichert werden, hat der Nutzer volle Kontrolle &uuml;ber alle Daten.</p>
 
-        <h2>10. Kontakt</h2>
+        <h2>11. Kontakt</h2>
         <p>Bei Fragen zum Datenschutz:<br><a href="mailto:kontakt.zahndoku@gmail.com">kontakt.zahndoku@gmail.com</a></p>
     </div>
 </body>
