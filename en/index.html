@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy &mdash; ZahnDoku</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background: #f5f5f7;
+            padding: 20px;
+        }
+        .container {
+            max-width: 680px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        .date { color: #86868b; font-size: 14px; margin-bottom: 12px; }
+        .langswitch { font-size: 14px; margin-bottom: 24px; }
+        h2 { font-size: 18px; font-weight: 600; margin-top: 28px; margin-bottom: 12px; color: #1d1d1f; }
+        p, li { font-size: 15px; color: #424245; margin-bottom: 10px; }
+        ul { padding-left: 20px; margin-bottom: 12px; }
+        strong { color: #1d1d1f; }
+        a { color: #0071e3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .highlight {
+            background: #f0f7ff;
+            border-left: 3px solid #0071e3;
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 24px; margin: 16px auto; }
+            h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="date">ZahnDoku &mdash; As of: August 2026</p>
+        <p class="langswitch"><a href="../">Deutsche Fassung</a></p>
+        <p style="font-size:13px;color:#86868b;">This English version is provided for convenience. In case of any discrepancy, the German version prevails.</p>
+
+        <h2>1. Controller &amp; Allocation of Roles</h2>
+        <p>Dr. Jan-Niclas Press<br>Dentist<br>Kopernikusgasse 21, 8010 Graz, Austria<br>Contact: <a href="mailto:kontakt.zahndoku@gmail.com">kontakt.zahndoku@gmail.com</a> (the &ldquo;Provider&rdquo;)</p>
+        <p>ZahnDoku is purely local software for dental practices. For the <strong>patient data</strong> processed with the app, <strong>the respective user (the dental practice) is the sole controller</strong> within the meaning of the GDPR (Art. 4 no. 7). The Provider supplies the software only, does not itself receive any patient data and is not a processor of the user.</p>
+
+        <h2>2. Core principle: all data stays local</h2>
+        <div class="highlight">
+            <strong>All data captured in the app is stored exclusively locally on the iOS device. No upload to the Provider's servers, cloud services or third parties takes place. The Provider has no access to the data.</strong>
+        </div>
+
+        <h2>3. What data is processed?</h2>
+        <ul>
+            <li><strong>Patient data:</strong> first name, last name, date of birth (optional), notes</li>
+            <li><strong>Photos and videos:</strong> dental images for clinical documentation</li>
+            <li><strong>Clinical annotations:</strong> VITA shades, lighting type, tooth numbers (FDI scheme)</li>
+            <li><strong>Security data:</strong> PIN hash (locally in the Keychain), biometric authentication</li>
+        </ul>
+        <p>Location and device metadata (EXIF/GPS) are automatically removed on capture and not stored.</p>
+
+        <h2>4. Where is the data stored?</h2>
+        <ul>
+            <li>Patient data and photos in the protected app sandbox directory (with iOS data protection NSFileProtectionComplete)</li>
+            <li>PIN hash in the iOS Keychain (hardware-encrypted, accessible only on this device)</li>
+            <li>Optional backup in the local file system (visible in the Files app)</li>
+        </ul>
+        <p>Patient data (photos, patient records, trash) is excluded from iCloud/iTunes backups and is not synchronised to the cloud.</p>
+
+        <h2>5. Device transfer</h2>
+        <p>The app offers a device-transfer function allowing all data to be exported as a .zahntransfer file and moved to a new device. The transfer is carried out solely by the user (e.g. via AirDrop or USB) &mdash; without any external server.</p>
+        <p>The transfer file contains all patient data and is unencrypted. The user is responsible for handling it securely and for deleting it after a successful transfer.</p>
+
+        <h2>6. Third-party services</h2>
+        <p>ZahnDoku uses <strong>no</strong> third-party services for data processing:</p>
+        <ul>
+            <li>No analytics (no Google Analytics, Firebase, etc.)</li>
+            <li>No crash reporting (no Sentry, Crashlytics, etc.)</li>
+            <li>No advertising tracking</li>
+            <li>No external APIs or servers</li>
+        </ul>
+
+        <h2>7. Subscription and payment</h2>
+        <p>ZahnDoku offers an optional subscription (ZahnDoku Pro). All payment processing is handled <strong>exclusively by Apple</strong> (App Store / Apple ID). Apple is an independent controller for the payment and account data it processes; Apple's privacy policy applies. ZahnDoku does <strong>not</strong> receive or store any payment data. The subscription status is evaluated exclusively locally on the device; no personal data is transmitted to the Provider.</p>
+
+        <h2>8. No data sharing, no international transfer</h2>
+        <p>Patient data is <strong>not</strong> shared with third parties. The only means of data export is a manual action by the user (ZIP export, PDF report, device transfer, share dialog).</p>
+        <p>As all data remains exclusively local on the device, <strong>no transfer to third countries and no international data transfer</strong> takes place.</p>
+
+        <h2>9. Data security</h2>
+        <ul>
+            <li>PIN protection (4-digit, hash in Keychain, hardware-encrypted)</li>
+            <li>Optional biometric unlocking (Face ID / Touch ID)</li>
+            <li>iOS data protection (NSFileProtectionComplete) &mdash; patient data accessible only when the device is unlocked</li>
+            <li>Automatic removal of location and device metadata (EXIF/GPS) from all photos</li>
+            <li>Patient data excluded from iCloud/iTunes backups</li>
+            <li>Privacy screen in the app switcher (no patient data visible)</li>
+        </ul>
+
+        <h2>10. Deletion</h2>
+        <ul>
+            <li>Photos and videos can be deleted at any time (7-day trash)</li>
+            <li>Patient data can be completely removed</li>
+            <li>On app uninstallation, all local data is removed</li>
+        </ul>
+
+        <h2>11. Rights of data subjects</h2>
+        <p>Under the GDPR, data subjects have the right to access, rectification, erasure, restriction of processing, data portability and objection.</p>
+        <p>As all data is stored exclusively locally with the user (the dental practice), these rights are to be exercised against the user as the controller. The Provider cannot process data-subject requests as it has no access to the data.</p>
+
+        <h2>12. International applicability (UK, Switzerland)</h2>
+        <p>For users and data subjects in the United Kingdom, this policy applies accordingly under the <strong>UK GDPR</strong>, and for Switzerland under the <strong>revised Federal Act on Data Protection (revFADP)</strong>. The purely local storage concept meets the requirements of these data protection regimes equally.</p>
+
+        <h2>13. Changes to this privacy policy</h2>
+        <p>The Provider may adapt this policy to reflect changes in the law, case law or app features. The current version linked in the app (see &ldquo;As of&rdquo; above) is authoritative.</p>
+
+        <h2>14. Contact</h2>
+        <p>For any privacy questions:<br><a href="mailto:kontakt.zahndoku@gmail.com">kontakt.zahndoku@gmail.com</a></p>
+    </div>
+</body>
+</html>

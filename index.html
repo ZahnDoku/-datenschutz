@@ -21,32 +21,12 @@
             padding: 40px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.08);
         }
-        h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .date {
-            color: #86868b;
-            font-size: 14px;
-            margin-bottom: 32px;
-        }
-        h2 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-top: 28px;
-            margin-bottom: 12px;
-            color: #1d1d1f;
-        }
-        p, li {
-            font-size: 15px;
-            color: #424245;
-            margin-bottom: 10px;
-        }
-        ul {
-            padding-left: 20px;
-            margin-bottom: 12px;
-        }
+        h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        .date { color: #86868b; font-size: 14px; margin-bottom: 12px; }
+        .langswitch { font-size: 14px; margin-bottom: 24px; }
+        h2 { font-size: 18px; font-weight: 600; margin-top: 28px; margin-bottom: 12px; color: #1d1d1f; }
+        p, li { font-size: 15px; color: #424245; margin-bottom: 10px; }
+        ul { padding-left: 20px; margin-bottom: 12px; }
         strong { color: #1d1d1f; }
         a { color: #0071e3; text-decoration: none; }
         a:hover { text-decoration: underline; }
@@ -68,12 +48,18 @@
     <div class="container">
         <h1>Datenschutzerkl&auml;rung</h1>
         <p class="date">ZahnDoku &mdash; Stand: August 2026</p>
+        <p class="langswitch"><a href="en/">English version</a></p>
 
-        <h2>1. Verantwortlicher</h2>
-        <p>Dr. Jan-Niclas Press<br>Zahnarzt<br>Kopernikusgasse 21, 8010 Graz, &Ouml;sterreich<br>Kontakt: <a href="mailto:kontakt.zahndoku@gmail.com">kontakt.zahndoku@gmail.com</a></p>
+        <h2>1. Verantwortlicher &amp; Rollenverteilung</h2>
+        <p>Dr. Jan-Niclas Press<br>Zahnarzt<br>Kopernikusgasse 21, 8010 Graz, &Ouml;sterreich<br>Kontakt: <a href="mailto:kontakt.zahndoku@gmail.com">kontakt.zahndoku@gmail.com</a> (nachfolgend &bdquo;Anbieter&ldquo;)</p>
+        <p>ZahnDoku ist eine rein lokale Software f&uuml;r Zahnarztpraxen. F&uuml;r die mit der App verarbeiteten <strong>Patientendaten ist der jeweilige Nutzer (die Zahnarztpraxis) allein Verantwortlicher</strong> im Sinne der DSGVO (Art. 4 Nr. 7). Der Anbieter stellt ausschlie&szlig;lich die Software bereit, erh&auml;lt selbst keine Patientendaten und ist kein Auftragsverarbeiter des Nutzers.</p>
 
-        <h2>2. Welche Daten werden erhoben?</h2>
-        <p>ZahnDoku ist eine lokale Fotodokumentations-App f&uuml;r Zahnarztpraxen. Die App erhebt und speichert folgende Daten <strong>ausschlie&szlig;lich lokal</strong> auf dem Ger&auml;t des Nutzers:</p>
+        <h2>2. Grundprinzip: Alle Daten bleiben lokal</h2>
+        <div class="highlight">
+            <strong>Alle in der App erfassten Daten werden ausschlie&szlig;lich lokal auf dem iOS-Ger&auml;t gespeichert. Es findet kein Upload auf Server des Anbieters, Cloud-Dienste oder Drittanbieter statt. Der Anbieter hat keinen Zugriff auf die Daten.</strong>
+        </div>
+
+        <h2>3. Welche Daten werden verarbeitet?</h2>
         <ul>
             <li><strong>Patientendaten:</strong> Vorname, Nachname, Geburtsdatum (optional), Notizen</li>
             <li><strong>Fotos und Videos:</strong> Dentale Aufnahmen zur klinischen Dokumentation</li>
@@ -82,10 +68,7 @@
         </ul>
         <p>Standort- und Ger&auml;temetadaten (EXIF/GPS) werden bei der Aufnahme automatisch entfernt und nicht gespeichert.</p>
 
-        <h2>3. Wo werden die Daten gespeichert?</h2>
-        <div class="highlight">
-            <strong>Alle Daten werden ausschlie&szlig;lich lokal auf dem iOS-Ger&auml;t gespeichert. Es findet kein Upload auf externe Server, Cloud-Dienste oder Drittanbieter statt.</strong>
-        </div>
+        <h2>4. Wo werden die Daten gespeichert?</h2>
         <ul>
             <li>Patientendaten und Fotos im gesch&uuml;tzten App-Sandboxverzeichnis (mit iOS-Dateischutz NSFileProtectionComplete)</li>
             <li>PIN-Hash in der iOS Keychain (hardwareverschl&uuml;sselt, nur auf diesem Ger&auml;t zug&auml;nglich)</li>
@@ -93,11 +76,11 @@
         </ul>
         <p>Patientendaten (Fotos, Patientenakte, Papierkorb) sind vom iCloud-/iTunes-Backup ausgeschlossen und werden nicht in die Cloud synchronisiert.</p>
 
-        <h2>4. Ger&auml;te-Transfer</h2>
+        <h2>5. Ger&auml;te-Transfer</h2>
         <p>Die App bietet eine Ger&auml;te-Transfer-Funktion, mit der alle Daten als .zahntransfer-Datei exportiert und auf ein neues Ger&auml;t &uuml;bertragen werden k&ouml;nnen. Der Transfer erfolgt ausschlie&szlig;lich durch den Nutzer (z.&nbsp;B. per AirDrop oder USB) &mdash; ohne Beteiligung externer Server.</p>
-        <p>Die Transfer-Datei enth&auml;lt alle Patientendaten und ist nicht verschl&uuml;sselt. Der Nutzer ist f&uuml;r den sicheren Umgang und die L&ouml;schung nach erfolgreichem Transfer verantwortlich. Der PIN muss auf dem neuen Ger&auml;t neu gesetzt werden.</p>
+        <p>Die Transfer-Datei enth&auml;lt alle Patientendaten und ist nicht verschl&uuml;sselt. Der Nutzer ist f&uuml;r den sicheren Umgang und die L&ouml;schung nach erfolgreichem Transfer verantwortlich.</p>
 
-        <h2>5. Drittanbieter-Dienste</h2>
+        <h2>6. Drittanbieter-Dienste</h2>
         <p>ZahnDoku verwendet <strong>keine</strong> Drittanbieter-Dienste zur Datenverarbeitung:</p>
         <ul>
             <li>Kein Analytics (kein Google Analytics, Firebase, etc.)</li>
@@ -106,13 +89,14 @@
             <li>Keine externen APIs oder Server</li>
         </ul>
 
-        <h2>6. Abonnement und Zahlung</h2>
-        <p>ZahnDoku bietet ein optionales Abonnement (ZahnDoku Pro) an. Die gesamte Zahlungsabwicklung erfolgt <strong>ausschlie&szlig;lich &uuml;ber Apple</strong> (App Store / Apple-ID). ZahnDoku erh&auml;lt oder speichert dabei <strong>keine Zahlungsdaten</strong> (z.&nbsp;B. Kreditkarten- oder Bankverbindungsdaten) &mdash; diese werden allein von Apple gem&auml;&szlig; der Datenschutzrichtlinie von Apple verarbeitet. Der Abo-Status wird ausschlie&szlig;lich lokal auf dem Ger&auml;t ausgewertet; es werden keine personenbezogenen Daten an den Anbieter &uuml;bertragen.</p>
+        <h2>7. Abonnement und Zahlung</h2>
+        <p>ZahnDoku bietet ein optionales Abonnement (ZahnDoku Pro) an. Die gesamte Zahlungsabwicklung erfolgt <strong>ausschlie&szlig;lich &uuml;ber Apple</strong> (App Store / Apple-ID). Apple ist insoweit eigenst&auml;ndig Verantwortlicher f&uuml;r die von Apple verarbeiteten Zahlungs- und Kontodaten; es gilt die Datenschutzrichtlinie von Apple. ZahnDoku erh&auml;lt oder speichert <strong>keine Zahlungsdaten</strong>. Der Abo-Status wird ausschlie&szlig;lich lokal auf dem Ger&auml;t ausgewertet; es werden keine personenbezogenen Daten an den Anbieter &uuml;bertragen.</p>
 
-        <h2>7. Datenweitergabe</h2>
+        <h2>8. Keine Datenweitergabe, keine internationale &Uuml;bermittlung</h2>
         <p>Patientendaten werden <strong>nicht</strong> an Dritte weitergegeben. Die einzige M&ouml;glichkeit des Datenexports ist die manuelle Aktion des Nutzers (ZIP-Export, PDF-Report, Ger&auml;te-Transfer, Teilen-Dialog).</p>
+        <p>Da alle Daten ausschlie&szlig;lich lokal auf dem Ger&auml;t verbleiben, findet <strong>keine &Uuml;bermittlung in Drittl&auml;nder und keine internationale Daten&uuml;bermittlung</strong> statt.</p>
 
-        <h2>8. Datensicherheit</h2>
+        <h2>9. Datensicherheit</h2>
         <ul>
             <li>PIN-Schutz (4-stellig, Hash in Keychain, hardwareverschl&uuml;sselt)</li>
             <li>Optionale biometrische Entsperrung (Face ID / Touch ID)</li>
@@ -122,17 +106,24 @@
             <li>Datenschutzbildschirm im App-Switcher (keine Patientendaten sichtbar)</li>
         </ul>
 
-        <h2>9. L&ouml;schung</h2>
+        <h2>10. L&ouml;schung</h2>
         <ul>
             <li>Fotos und Videos k&ouml;nnen jederzeit gel&ouml;scht werden (7-Tage-Papierkorb)</li>
             <li>Patientendaten k&ouml;nnen vollst&auml;ndig entfernt werden</li>
             <li>Bei App-Deinstallation werden alle lokalen Daten entfernt</li>
         </ul>
 
-        <h2>10. Rechte der Betroffenen</h2>
-        <p>Gem&auml;&szlig; DSGVO haben betroffene Personen das Recht auf Auskunft, Berichtigung, L&ouml;schung, Einschr&auml;nkung der Verarbeitung und Widerspruch. Da alle Daten lokal gespeichert werden, hat der Nutzer volle Kontrolle &uuml;ber alle Daten.</p>
+        <h2>11. Rechte der Betroffenen</h2>
+        <p>Gem&auml;&szlig; DSGVO haben betroffene Personen das Recht auf Auskunft, Berichtigung, L&ouml;schung, Einschr&auml;nkung der Verarbeitung, Daten&uuml;bertragbarkeit und Widerspruch.</p>
+        <p>Da alle Daten ausschlie&szlig;lich lokal beim Nutzer (der Zahnarztpraxis) gespeichert sind, sind diese Rechte gegen&uuml;ber dem Nutzer als Verantwortlichem geltend zu machen. Der Anbieter kann mangels Zugriff auf die Daten keine Betroffenenanfragen bearbeiten.</p>
 
-        <h2>11. Kontakt</h2>
+        <h2>12. Internationale Anwendbarkeit (UK, Schweiz)</h2>
+        <p>F&uuml;r Nutzer und betroffene Personen im Vereinigten K&ouml;nigreich gilt diese Erkl&auml;rung entsprechend nach der <strong>UK GDPR</strong>, f&uuml;r die Schweiz nach dem <strong>revidierten Bundesgesetz &uuml;ber den Datenschutz (revDSG)</strong>. Das rein lokale Speicherkonzept erf&uuml;llt die Anforderungen dieser Datenschutzregime gleicherma&szlig;en.</p>
+
+        <h2>13. &Auml;nderungen dieser Datenschutzerkl&auml;rung</h2>
+        <p>Der Anbieter kann diese Erkl&auml;rung anpassen, um sie an ge&auml;nderte Rechtslage, Rechtsprechung oder Funktionen der App anzupassen. Ma&szlig;geblich ist die jeweils in der App verlinkte aktuelle Fassung (siehe &bdquo;Stand&ldquo; oben).</p>
+
+        <h2>14. Kontakt</h2>
         <p>Bei Fragen zum Datenschutz:<br><a href="mailto:kontakt.zahndoku@gmail.com">kontakt.zahndoku@gmail.com</a></p>
     </div>
 </body>
